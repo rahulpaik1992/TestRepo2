@@ -1,0 +1,134 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.1",
+  "serial": 16,
+  "lineage": "512cffbd-e0ff-9825-39d4-4c82c7aeb522",
+  "outputs": {
+    "vm_admin_password": {
+      "value": "P@ssw0rd1234!",
+      "type": "string",
+      "sensitive": true
+    },
+    "vm_admin_username": {
+      "value": "azureuser",
+      "type": "string"
+    },
+    "vm_private_ip": {
+      "value": null,
+      "type": "string"
+    },
+    "vm_public_ip": {
+      "value": null,
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/8cad7e84-8410-4bd0-8521-b154325eef87/resourceGroups/newResourceGroup/providers/Microsoft.Network/networkSecurityGroups/example-security-group",
+            "location": "centralindia",
+            "name": "example-security-group",
+            "resource_group_name": "newResourceGroup",
+            "security_rule": [
+              {
+                "access": "Allow",
+                "description": "",
+                "destination_address_prefix": "*",
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_range": "22",
+                "destination_port_ranges": [],
+                "direction": "Inbound",
+                "name": "Allow-SSH",
+                "priority": 1001,
+                "protocol": "Tcp",
+                "source_address_prefix": "*",
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_range": "*",
+                "source_port_ranges": []
+              }
+            ],
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "example-security-group",
+            "resource_group_name": "newResourceGroup",
+            "subscription_id": "8cad7e84-8410-4bd0-8521-b154325eef87"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.example"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "RG",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/8cad7e84-8410-4bd0-8521-b154325eef87/resourceGroups/newResourceGroup",
+            "location": "centralindia",
+            "managed_by": "",
+            "name": "newResourceGroup",
+            "tags": {
+              "environment": "testing"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "newResourceGroup",
+            "subscription_id": "8cad7e84-8410-4bd0-8521-b154325eef87"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/8cad7e84-8410-4bd0-8521-b154325eef87/resourceGroups/newResourceGroup",
+            "location": "centralindia",
+            "managed_by": "",
+            "name": "newResourceGroup",
+            "tags": {
+              "environment": "testing"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "newResourceGroup",
+            "subscription_id": "8cad7e84-8410-4bd0-8521-b154325eef87"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
