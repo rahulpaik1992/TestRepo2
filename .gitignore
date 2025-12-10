@@ -1,0 +1,10 @@
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+crash.log
+# Optional: local override files
+override.tf
+override.tf.json
+.terraformrc
+terraform.rc
