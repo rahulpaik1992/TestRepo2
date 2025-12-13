@@ -8,16 +8,23 @@ terraform {
 }
 provider "azurerm" {
   features {}
+  subscription_id = var.subscription_id
+}
+
+variable "subscription_id" {
+  description = "Azure subscription ID"
+  type        = string
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "newResourceGroup"
+  name     = "newRG2"
   location = "centralindia"
   tags = {
     environment = "testing"
   }
 }
 
+/*
 resource "azurerm_network_security_group" "example" {
   name                = "example-security-group"
   location            = azurerm_resource_group.example.location
@@ -66,3 +73,4 @@ resource "azurerm_subnet_network_security_group_association" "subnet2_nsg" {
   subnet_id                 = azurerm_subnet.subnet2.id
   network_security_group_id = azurerm_network_security_group.example.id
 }
+*/

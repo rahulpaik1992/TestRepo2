@@ -1,3 +1,5 @@
+
+/*
 # Network Interface for the VM
 resource "azurerm_network_interface" "example" {
   name                = "example-nic"
@@ -79,3 +81,4 @@ output "vm_admin_password" {
   description = "Admin password for Windows VM"
   sensitive   = true
 }
+*/
