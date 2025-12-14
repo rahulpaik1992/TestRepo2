@@ -24,6 +24,14 @@ resource "azurerm_resource_group" "example" {
   }
 }
 
+resource "azurerm_resource_group" "example3" {
+  name     = "newRG3"
+  location = "centralindia"
+  tags = {
+    environment = "testing"
+  }
+}
+
 /*
 resource "azurerm_network_security_group" "example" {
   name                = "example-security-group"
